@@ -482,7 +482,7 @@ body.menu-open {
   overflow: hidden !important;
 }  
  .hero-image {
-    height: 40vh; /* ⬅️ polovica výšky displeja */
+    height: 36vh; /* ⬅️ polovica výšky displeja */
     margin-top: 75px; /* kvôli fixed headeru */
     overflow: hidden;
     display: flex;
@@ -492,8 +492,8 @@ body.menu-open {
 
   .hero-image img.contact-photo {
     width: auto; /* ⬅️ ZMENENÉ */
-    height: 180%; /* ⬅️ vyplní celú výšku */
-    min-width: 180%; /* ⬅️ zabezpečí pokrytie šírky */
+    height: 190%; /* ⬅️ vyplní celú výšku */
+    min-width: 190%; /* ⬅️ zabezpečí pokrytie šírky */
     object-fit: cover; /* ⬅️ DÔLEŽITÉ - orezanie ako cover */
     object-position: center; /* ⬅️ stred fotky */
   }
