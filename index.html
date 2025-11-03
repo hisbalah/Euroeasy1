@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Changa+One&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="contact-widget.css">
+    <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EuroEasy – Slider test</title>
+  <script>
+(function() {
+  if (document.cookie.includes("site_dark=1")) {
+    document.documentElement.classList.add("dark-mode");
+  }
+})();
+</script>
+
+  <link rel="stylesheet" href="style.css" />
+ </head>
+<body>
+
+  
+  <!-- ===== HEADER ===== -->
+<header class="header">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <div class="logo">
+    <img src="logo.png" alt="Euro Easy logo">
+  </div>
+
+  <nav class="nav">
+    <ul>
+      <li><a href="o-nas.html">O nás</a></li>
+      <li><a href="cennik.html">Cenník</a></li>
+      <li><a href="napodpis.html">Na podpis</a></li>
+      <li><a href="najcastejsie-otazky.html">Najčastejšie otázky</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+   </nav>
+
+  <!-- Burger menu (viditeľné len na mobile) -->
+  <button id="burger" class="burger">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+<div class="header-social">
+  <a href="https://facebook.com/TVOJ_FB" target="_blank" class="social-link">
+    <i class="fa-brands fa-facebook"></i>
+  </a>
+  <a href="https://instagram.com/TVOJ_IG" target="_blank" class="social-link">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+</div>
+
+<div class="mobile-social">
+  <a href="https://facebook.com/TVOJ_FB" target="_blank" class="social-link">
+    <i class="fa-brands fa-facebook"></i>
+  </a>
+  <a href="https://instagram.com/TVOJ_IG" target="_blank" class="social-link">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+</div>
+
+
+</header>
+
+ <!-- Mobilné menu – zobrazí sa po kliknutí na burger -->
+<nav class="mobile-menu" id="mobileMenu">
+  <a href="o-nas.html">O nás</a>
+  <a href="cennik.html">Cenník</a>
+  <a href="napodpis.html">Na podpis</a>
+  <a href="najcastejsie-otazky.html">Najčastejšie otázky</a>
+  <a href="kontakt.html">Kontakt</a>
+</nav>
+
+  <!-- ===== SLIDER ===== -->
+  <section class="slider" id="slider">
+    <div class="slide active" style="background-image: url('my.jpg')">
+      <div class="overlay"></div>
+      <div class="slide-content">
+        <h2>Pracujete v Nemecku? Vrátime vám vaše odvedené dane</h2>
+        <p>Po vyplnení nasledovného dotazníka vám predom BEZPLATNE vypítame možnú výšku preplatku daní a ozveme sa hneď ako to bude.</p>
+        <a href="#" class="btn">Zistiť viac</a>
+        <div class="slide-controls">
+    <button class="arrow left">&#10094;</button>
+    <div class="slide-dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+    <button class="arrow right">&#10095;</button>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <div class="slide" style="background-image: url('my.jpg')">
+      <div class="overlay"></div>
+      <div class="slide-content">
+        <h2>Vrátenie daní zo zahraničia</h2>
+        <p>Pomáhame Slovákom, Čechom aj Poliakom získať späť ich peniaze.</p>
+        <a href="#" class="btn">Kontaktujte nás</a>
+        <div class="slide-controls">
+    <button class="arrow left">&#10094;</button>
+    <div class="slide-dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+    <button class="arrow right">&#10095;</button>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <div class="slide" style="background-image: url('my.jpg')">
+      <div class="overlay"></div>
+      <div class="slide-content">
+        <h2>Jednoducho a bez stresu</h2>
+        <p>Stačí vyplniť formulár a o všetko ostatné sa postaráme my.</p>
+        <a href="#" class="btn">Začať teraz</a>
+        <div class="slide-controls">
+    <button class="arrow left">&#10094;</button>
+    <div class="slide-dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+    <button class="arrow right">&#10095;</button>
+  </div>
+</div>
+      </div>
+    </div>
+
+    
+  </section>
+  
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-wrap">
+  <img src="logo.png" alt="Logo" class="footer-logo" />
+  <div class="footer-text">
+    <p>KONTAKTUJTE NÁS</p>
+    <p>info@euroeasy.de</p>
+    <p>+421 944 337 878</p>
+  </div>
+</div>
+
+  </footer>
+  
+
+  
+
+<!-- ===== COOKIE BANNER ===== -->
+<div id="cookie-bar" class="cookie-bar">
+  <p>Táto webová stránka používa súbory cookies na zlepšenie vášho zážitku pri prechádzaní webom. Z nich sa vo vašom prehliadači ukladajú súbory cookies, ktoré sú kategorizované podľa potreby, pretože sú nevyhnutné pre fungovanie základných funkcií webovej stránky. Používame aj cookies tretích strán, ktoré nám pomáhajú analyzovať a pochopiť, ako používate túto webovú stránku. Tieto cookies budú uložené vo vašom prehliadači iba s vaším súhlasom. Máte tiež možnosť zrušiť tieto cookies. Zrušenie niektorých z týchto súborov cookies však môže ovplyvniť váš zážitok z prehliadania.</p>
+  <div class="cookie-buttons">
+    <button id="cookie-deny">Odmietnuť</button>
+    <button id="cookie-settings-open">Nastavenie</button>
+    <button id="cookie-accept">Prijať</button>
+  </div>
+</div>
+
+<!-- ===== COOKIE SETTINGS MODAL ===== -->
+<div id="cookie-modal" class="cookie-modal">
+  <div class="cookie-modal-content">
+    <button id="cookie-close" class="cookie-close">×</button>
+    <h2>Nastavenia cookies</h2>
+
+    <div class="cookie-option">
+      <div>
+        <strong>Funkčné</strong>
+        <p>Nevyhnutné pre správny chod webu.</p>
+      </div>
+      <span class="cookie-badge">Vždy zapnuté</span>
+    </div>
+
+    <div class="cookie-option">
+      <div>
+        <strong>Štatistické</strong>
+        <p>Pomáhajú nám pochopiť, ako sa web používa (anonymne).</p>
+      </div>
+      <label class="switch">
+        <input type="checkbox" id="statCookies">
+        <span class="cookie-switch round"></span>
+      </label>
+    </div>
+
+    <div class="cookie-option">
+      <div>
+        <strong>Marketingové</strong>
+        <p>Používané na personalizáciu reklamy.</p>
+      </div>
+      <label class="switch">
+        <input type="checkbox" id="markCookies">
+        <span class="cookie-switch round"></span>
+      </label>
+    </div>
+
+    <div class="cookie-modal-buttons">
+      <button id="cookie-deny-2">Odmietnuť</button>
+      <button id="cookie-accept-2" class="primary">Prijať</button>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT WIDGET -->
+<div class="contact-launcher">
+  <div class="launcher-label">Kontaktujte nás</div>
+
+  <button class="launcher-circle" id="launcherBtn">
+    <i class="fa-solid fa-comments icon-comment"></i>
+    <i class="fa-solid fa-xmark icon-close"></i>
+  </button>
+
+  <div class="channel-stack">
+    <a class="channel-btn whatsapp" href="https://wa.me/421944337878" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <a class="channel-btn facebook" href="https://facebook.com" target="_blank">
+      <i class="fa-brands fa-facebook-f"></i>
+    </a>
+    <a class="channel-btn email" href="mailto:info@euroeasy.de">
+      <i class="fa-solid fa-envelope"></i>
+    </a>
+    <a class="channel-btn phone" href="tel:+421944337878">
+      <i class="fa-solid fa-phone"></i>
+    </a>
+  </div>
+</div>
+
+<div class="theme-floating-switch" aria-label="Theme toggle">
+  <label class="theme-switch">
+    <input type="checkbox" id="darkModeSwitch">
+    <span class="track"></span><span class="thumb"></span>
+  </label>
+</div>
+
+
+
+<div class="theme-track-overlay" aria-hidden="true"></div>
+
+
+
+<script src="menu.js"></script>
+<script src="cookie.js"></script>
+<script src="slider.js"></script>
+<script src="contact-widget.js"></script>
+
+
+</body>
+</html>

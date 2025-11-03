@@ -1,0 +1,203 @@
+:root {
+  --gold: #FFD700;
+  --shadow-lg: 0 16px 38px rgba(0,0,0,.24);
+  --shadow: 0 12px 28px rgba(0,0,0,.2);
+  --shadow-sm: 0 8px 20px rgba(0,0,0,.16);
+}
+
+.contact-launcher {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  z-index: 9999;
+  font-family: system-ui, Segoe UI, Roboto, sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.launcher-label {
+  background: #fff;
+  color: #111827;
+  padding: 10px 16px;
+  border-radius: 9999px;
+  font-weight: 700;
+  box-shadow: var(--shadow-sm);
+  user-select: none;
+  white-space: nowrap;
+}
+
+.launcher-circle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: var(--gold);
+  color: #fff;
+  box-shadow: var(--shadow-lg);
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+  will-change: transform;
+  .launcher-circle {
+  outline: none;
+  -webkit-tap-highlight-color: transparent; /* odstráni štvorec na mobile */
+}
+
+.launcher-circle:focus,
+.launcher-circle:focus-visible {
+  outline: none;               /* odstráni rámček po kliknutí */
+  box-shadow: none;            /* ak by si mal ešte aj nejaký vlastný tieň */
+}
+
+.launcher-circle::-moz-focus-inner {
+  border: 0;                   /* špeciálne pre Firefox */
+}
+}
+
+.launcher-circle:hover {
+  transform: translateY(-2px) scale(1.03);
+  filter: brightness(1.03);
+}
+
+.launcher-circle:active {
+  transform: translateY(0) scale(1);
+}
+
+.launcher-circle i {
+  position: absolute;
+  font-size: 30px;
+  line-height: 1;
+}
+
+
+.icon-comment {
+  transform-origin: 50% 60%;
+  animation: breathe 4.5s ease-in-out infinite;
+}
+
+.icon-close {
+  opacity: 0;
+  transform: rotate(-45deg) scale(.8);
+  transition: opacity 0.2s ease, transform .02s ease;
+}
+
+.channel-stack {
+  position: absolute;
+  right: 0;
+  bottom: 106px; /* väčšia medzera: 72px (button) + 34px (gap) */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(10px) scale(0.95); /* menší posun, pridaný scale */
+  transition: opacity .2s ease-out, transform .2s ease-out; /* rýchlejšie */
+}
+
+.channel-btn {
+  width: 71.8px;
+  height: 71.8px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  box-shadow: var(--shadow);
+  transform: scale(0.9); /* namiesto translateY - buttony sa nestrácajú */
+  opacity: 1; /* vždy viditeľné */
+  transition: transform .25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow .2s ease; /* pružná animácia */
+  will-change: transform;
+}
+
+.channel-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: var(--shadow-lg);
+}
+
+.channel-btn i {
+  font-size: 31.2px;
+}
+
+.channel-btn.whatsapp {
+  background: #25D366;
+}
+
+.channel-btn.facebook {
+  background: #1877F2;
+}
+
+.channel-btn.email {
+  background: #6B7280;
+}
+
+.channel-btn.phone {
+  background: #0F172A;
+}
+
+.contact-launcher.open .channel-stack {
+  pointer-events: auto;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-launcher.open .channel-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-launcher.open .channel-btn:nth-child(1) {
+  transition-delay: .05s;
+}
+
+.contact-launcher.open .channel-btn:nth-child(2) {
+  transition-delay: .15s;
+}
+
+.contact-launcher.open .channel-btn:nth-child(3) {
+  transition-delay: .25s;
+}
+
+.contact-launcher.open .channel-btn:nth-child(4) {
+  transition-delay: .35s;
+}
+
+.contact-launcher.open .icon-comment {
+  opacity: 0;
+  transform: translateY(4px) rotate(10deg) scale(.9);
+  animation: none;
+}
+
+.contact-launcher.open .icon-close {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+#chaty-widget, .cht-widget, .cht-app, .chaty-widget {
+  display: none !important;
+}
+
+@keyframes breathe {
+  0%, 30%, 60%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  12%, 42%, 72% {
+    transform: scale(1.35) rotate(0deg);
+    opacity: 0.95;
+  }
+  24%, 54%, 84% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+    opacity: 1;
+  }
+}

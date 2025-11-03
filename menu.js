@@ -1,0 +1,41 @@
+// Burger menu
+document.addEventListener('DOMContentLoaded', () => {
+  const burger = document.getElementById('burger');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  if (burger && mobileMenu) {
+    burger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+      document.body.classList.toggle('menu-open');
+    });
+  }
+});
+
+// DARK MODE persistent toggle
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("darkModeSwitch");
+
+  // Read cookie
+  const dark = document.cookie.includes("site_dark=1");
+
+  if (dark) {
+    document.documentElement.classList.add("dark-mode");
+    document.body.classList.add("dark-mode");
+    if (toggle) toggle.checked = true;
+  }
+
+  if (toggle) {
+    toggle.addEventListener("change", () => {
+      const on = toggle.checked;
+
+      document.documentElement.classList.toggle("dark-mode", on);
+      document.body.classList.toggle("dark-mode", on);
+
+      // write cookie (session only)
+      document.cookie = on
+        ? "site_dark=1; path=/"
+        : "site_dark=0; path=/";
+    });
+  }
+});
+
