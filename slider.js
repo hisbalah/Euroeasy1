@@ -3,6 +3,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const totalSlides = slides.length;
   let currentSlide = 0;
 
+  // ===== AUTO SLIDE TIMER =====
+  let autoSlide = setInterval(nextSlide, 6000);
+
+  function stopAutoSlide() {
+    clearInterval(autoSlide);
+    autoSlide = null;
+  }
+
   // funkcia na zobrazenie správneho slide-u
   function showSlide(index) {
     slides.forEach((slide, i) => {
@@ -29,21 +37,27 @@ document.addEventListener("DOMContentLoaded", () => {
   slides.forEach((slide) => {
     const left = slide.querySelector(".arrow.left");
     const right = slide.querySelector(".arrow.right");
-    if (left) left.addEventListener("click", prevSlide);
-    if (right) right.addEventListener("click", nextSlide);
+
+    if (left) left.addEventListener("click", () => {
+      stopAutoSlide();
+      prevSlide();
+    });
+
+    if (right) right.addEventListener("click", () => {
+      stopAutoSlide();
+      nextSlide();
+    });
 
     // priradenie eventov pre bodky v každom slide
     const dots = slide.querySelectorAll(".dot");
     dots.forEach((dot, j) => {
       dot.addEventListener("click", () => {
+        stopAutoSlide();
         currentSlide = j;
         showSlide(currentSlide);
       });
     });
   });
-
-  // automatické prepínanie
-  setInterval(nextSlide, 6000);
 
   // inicializácia
   showSlide(currentSlide);
