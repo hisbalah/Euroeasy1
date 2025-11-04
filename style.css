@@ -250,7 +250,7 @@ body{font-family:"Roboto",sans-serif;background:#fff;color:#000;overflow-x:hidde
  
  .slide-content h2 {
     font-size: 40px !important;
-    line-height: 1.1;
+    line-height: 1.2;
     max-width: 90%;
     margin: 0 auto;
   }
@@ -481,22 +481,7 @@ body{font-family:"Roboto",sans-serif;background:#fff;color:#000;overflow-x:hidde
 body.menu-open {
   overflow: hidden !important;
 }  
- .hero-image {
-    height: 36vh; /* ⬅️ polovica výšky displeja */
-    margin-top: 75px; /* kvôli fixed headeru */
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
 
-  .hero-image img.contact-photo {
-    width: auto; /* ⬅️ ZMENENÉ */
-    height: 190%; /* ⬅️ vyplní celú výšku */
-    min-width: 190%; /* ⬅️ zabezpečí pokrytie šírky */
-    object-fit: cover; /* ⬅️ DÔLEŽITÉ - orezanie ako cover */
-    object-position: center; /* ⬅️ stred fotky */
-  }
 
 
 .footer-text p:first-child {
