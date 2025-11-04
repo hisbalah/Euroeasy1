@@ -39,3 +39,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// Re-apply theme when page is returned from browser cache
+window.addEventListener("pageshow", () => {
+  const isDark = document.cookie.includes("site_dark=1");
+
+  document.body.classList.toggle("dark-mode", isDark);
+
+  const darkSwitch = document.getElementById("darkModeSwitch");
+  if (darkSwitch) darkSwitch.checked = isDark;
+});
