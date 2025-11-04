@@ -245,7 +245,7 @@ body{font-family:"Roboto",sans-serif;background:#fff;color:#000;overflow-x:hidde
  
  .slide-content .btn {
     margin-top: 16px !important; /* menej miesta nad bodkami */
-    margin-bottom: 30px !important; /* miesto nad bodkami */
+    margin-bottom: 26px !important; /* miesto nad bodkami */
  }
  
  .slide-content h2 {
@@ -253,6 +253,8 @@ body{font-family:"Roboto",sans-serif;background:#fff;color:#000;overflow-x:hidde
     line-height: 1.1;
     max-width: 90%;
     margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
   }
  
  /* Reset LOGO position on mobile */
