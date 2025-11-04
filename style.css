@@ -252,10 +252,10 @@ body{font-family:"Roboto",sans-serif;background:#fff;color:#000;overflow-x:hidde
     font-size: 40px !important;
     line-height: 1.1;
     max-width: 90%;
-    margin: 0 auto;
+    margin: -10px auto;
     margin-left: auto;
     margin-right: auto;
-   text-align: justify;
+   
   }
  
  /* Reset LOGO position on mobile */
