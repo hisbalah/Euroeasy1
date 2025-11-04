@@ -255,6 +255,7 @@ body{font-family:"Roboto",sans-serif;background:#fff;color:#000;overflow-x:hidde
     margin: 0 auto;
     margin-left: auto;
     margin-right: auto;
+   text-align: justify;
   }
  
  /* Reset LOGO position on mobile */
