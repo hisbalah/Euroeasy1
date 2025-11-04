@@ -245,7 +245,7 @@ body{font-family:"Roboto",sans-serif;background:#fff;color:#000;overflow-x:hidde
  
  .slide-content .btn {
     margin-top: 16px !important; /* menej miesta nad bodkami */
-    margin-bottom: 26px !important; /* miesto nad bodkami */
+    margin-bottom: 18px !important; /* miesto nad bodkami */
  }
  
  .slide-content h2 {
