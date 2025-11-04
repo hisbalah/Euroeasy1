@@ -499,7 +499,7 @@ body.menu-open {
     object-position: center;
     
     /* ✅ SIMULÁCIA PRIBLIŽENIA O ~50% */
-    transform: scale(1.9);  /* zoom 150% */
+    transform: scale(2.1);  /* zoom 150% */
     transform-origin: center center; /* drží zoom v strede */
   }
 
