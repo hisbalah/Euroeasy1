@@ -10,8 +10,8 @@
   <script>
 (function() {
   if (document.cookie.includes("site_dark=1")) {
-    document.documentElement.classList.add("dark-mode");
-  }
+  document.body.classList.add("dark-mode");
+}
 })();
 </script>
 
@@ -32,7 +32,7 @@
     <ul>
       <li><a href="o-nas.html">O nás</a></li>
       <li><a href="cennik.html">Cenník</a></li>
-      <li><a href="napodpis.html">Na podpis</a></li>
+      <li><a href="#" onclick="openSignature(); return false;">Na podpis</a></li>
       <li><a href="najcastejsie-otazky.html">Najčastejšie otázky</a></li>
       <li><a href="kontakt.html">Kontakt</a></li>
     </ul>
@@ -81,8 +81,8 @@
     <div class="slide active" style="background-image: url('my.jpg')">
       <div class="overlay"></div>
       <div class="slide-content">
-        <h2>Pracovali ste v posledných 4 rokoch v Nemecku? Vrátime vám vaše odvedené dane</h2>
-        <p>Stačí vyplniť dotazník, my sa vám ozveme a o zvyšok sa postaráme.</p>
+        <h2>Pracujete v Nemecku? Vrátime vám vaše odvedené dane</h2>
+        <p>Po vyplnení nasledovného dotazníka vám predom BEZPLATNE vypítame možnú výšku preplatku daní a ozveme sa hneď ako to bude možné.</p>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdfOWTthZ9CP9TQri5mcsRzQerJEgkhrKZBEcyHsE22SSM4Bw/viewform" 
    class="btn" 
    target="_blank">Dotazník</a>
@@ -103,7 +103,7 @@
       <div class="overlay"></div>
       <div class="slide-content">
         <h2>Vrátenie daní zo zahraničia</h2>
-        <p>Pomáhame Slovákom a Čechom získať späť ich peniaze.</p>
+        <p>Pomáhame Slovákom, Čechom aj Poliakom získať späť ich peniaze.</p>
         <a href="kontakt.html" class="btn" target="_blank">Kontaktujte nás</a>
         <div class="slide-controls">
     <button class="arrow left">&#10094;</button>
@@ -121,8 +121,8 @@
     <div class="slide" style="background-image: url('my.jpg')">
       <div class="overlay"></div>
       <div class="slide-content">
-      <h2>Jednoducho a bez stresu</h2>
-        <p>Po vyplnení dotazníka vám BEZPLATNE vypočítametame možnú výšku preplatku daní.</p>  
+        <h2>Jednoducho a bez stresu</h2>
+        <p>Stačí vyplniť dotazník a o všetko ostatné sa postaráme my.</p>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdfOWTthZ9CP9TQri5mcsRzQerJEgkhrKZBEcyHsE22SSM4Bw/viewform" 
    class="btn" 
    target="_blank">Dotazník</a>
@@ -141,8 +141,7 @@
 
     
   </section>
-
- 
+  
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="footer-wrap">
@@ -254,6 +253,12 @@
 <script src="cookie.js"></script>
 <script src="slider.js"></script>
 <script src="contact-widget.js"></script>
+
+<script>
+function openSignature() {
+  window.open("https://hisbalah.github.io/podpisNOWAK/", "_blank");
+}
+</script>
 
 
 </body>
