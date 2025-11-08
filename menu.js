@@ -48,3 +48,22 @@ window.addEventListener("pageshow", () => {
   const darkSwitch = document.getElementById("darkModeSwitch");
   if (darkSwitch) darkSwitch.checked = isDark;
 });
+
+// ✅ PRIDAŤ TOTO — nič nemažeš, len vložíš dole
+document.addEventListener("DOMContentLoaded", () => {
+  const mobileMenu = document.getElementById("mobileMenu");
+  const signatureLink = mobileMenu?.querySelector('a[data-signature]');
+
+  if (signatureLink) {
+    signatureLink.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      // zatvorenie menu
+      mobileMenu.classList.remove("active");
+      document.body.classList.remove("menu-open");
+
+      // otvorenie novej stránky
+      window.open("https://hisbalah.github.io/podpisNOWAK/", "_blank");
+    });
+  }
+});
